@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: server
+  name: server
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: server
+  template:
+    metadata:
+      labels:
+        app: server
+    spec:
+      containers:
+      - image: docker.pkg.github.com/superbrothers-sandbox/try-envoy-grpc/hello
+        name: hello
+        imagePullPolicy: IfNotPresent
+        env:
+        - name: GRPC_GO_LOG_SEVERITY_LEVEL
+          value: info

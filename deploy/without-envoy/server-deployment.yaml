@@ -1,0 +1,11 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: server
+spec:
+  template:
+    spec:
+      containers:
+      - image: docker.pkg.github.com/superbrothers-sandbox/try-envoy-grpc/hello
+        name: hello
+        args: ["--server.max-connection-idle", "1s"]
