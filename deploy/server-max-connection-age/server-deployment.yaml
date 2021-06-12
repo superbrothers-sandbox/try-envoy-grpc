@@ -6,6 +6,5 @@ spec:
   template:
     spec:
       containers:
-      - image: docker.pkg.github.com/superbrothers-sandbox/try-envoy-grpc/hello
-        name: hello
+      - name: hello
         args: ["-server.max-connection-age", "1s", "-server.max-connection-age-grace", "5s"]

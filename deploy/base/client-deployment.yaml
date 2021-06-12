@@ -15,7 +15,7 @@ spec:
         app: client
     spec:
       containers:
-      - image: docker.pkg.github.com/superbrothers-sandbox/try-envoy-grpc/hello
+      - image: ghcr.io/superbrothers-sandbox/try-envoy-grpc/hello
         name: hello
         imagePullPolicy: IfNotPresent
         args: ["-client", "-addr", "envoy:8080", '-client.interval', '3s']

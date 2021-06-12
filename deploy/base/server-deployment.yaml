@@ -15,7 +15,7 @@ spec:
         app: server
     spec:
       containers:
-      - image: docker.pkg.github.com/superbrothers-sandbox/try-envoy-grpc/hello
+      - image: ghcr.io/superbrothers-sandbox/try-envoy-grpc/hello
         name: hello
         imagePullPolicy: IfNotPresent
         env:

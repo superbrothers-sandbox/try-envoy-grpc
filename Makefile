@@ -27,7 +27,7 @@ test: lint unit-test
 clean:
 	@rm -rf $(BIN_DIR)
 
-REPO ?= docker.pkg.github.com/superbrothers-sandbox/try-envoy-grpc
+REPO ?= ghcr.io/superbrothers-sandbox/try-envoy-grpc
 NAME ?= hello
 IMAGE := $(REPO)/$(NAME)
 .PHONY: image-build
