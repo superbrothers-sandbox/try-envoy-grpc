@@ -9,5 +9,4 @@ resources:
 - server-service.yaml
 - envoy-service.yaml
 - envoy-deployment.yaml
-- client-deployment.yaml
 - servicemonitor.yaml
